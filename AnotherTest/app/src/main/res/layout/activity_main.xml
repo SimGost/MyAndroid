@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity" android:orientation="vertical">
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="40pt"
+            android:gravity="right|center"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:id="@+id/calcResult"/>
+    <TableLayout android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
+        <TableRow android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginBottom="2pt"
+        >
+            <Button
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
+                    android:layout_weight="1"
+                    android:text="AC"
+                    android:textSize="8pt"
+                    android:textColor="@color/black"
+                    android:background="@color/yellow"
+                    android:layout_marginStart="2pt"
+                    android:id="@+id/calcAC" android:onClick="operatorIvent"/>
+            <Button
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
+                    android:layout_weight="1"
+                    android:text="*"
+                    android:textSize="8pt"
+                    android:textColor="@color/black"
+                    android:background="@color/yellow"
+                    android:layout_marginStart="2pt"
+                    android:id="@+id/calcMultiply" android:onClick="operatorIvent"/>
+            <Button
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
+                    android:layout_weight="1"
+                    android:text="/"
+                    android:textSize="8pt"
+                    android:textColor="@color/black"
+                    android:background="@color/yellow"
+                    android:layout_marginStart="2pt"
+                    android:id="@+id/calcDivide" android:onClick="operatorIvent"/>
+            <Button
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
+                    android:layout_weight="1"
+                    android:text="+/-"
+                    android:textSize="8pt"
+                    android:textColor="@color/black"
+                    android:background="@color/yellow"
+                    android:layout_marginStart="2pt"
+                    android:id="@+id/calcPlusMinus" android:onClick="numberIvent"/>
+        </TableRow>
+
+        <TableRow android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginBottom="2pt"
+        >
+            <Button
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
+                    android:layout_weight="1"
+                    android:text="1"
+                    android:textSize="8pt"
+                    android:textColor="@color/black"
+                    android:background="@color/darkyellow"
+                    android:layout_marginStart="2pt"
+                    android:id="@+id/calcOne" android:onClick="numberIvent"/>
+            <Button
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
+                    android:layout_weight="1"
+                    android:text="2"
+                    android:textSize="8pt"
+                    android:textColor="@color/black"
+                    android:background="@color/darkyellow"
+                    android:layout_marginStart="2pt"
+                    android:id="@+id/calcTwo" android:onClick="numberIvent"/>
+            <Button
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
+                    android:layout_weight="1"
+                    android:text="3"
+                    android:textSize="8pt"
+                    android:textColor="@color/black"
+                    android:background="@color/darkyellow"
+                    android:layout_marginStart="2pt"
+                    android:id="@+id/calcThree" android:onClick="numberIvent"/>
+            <Button
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
+                    android:layout_weight="1"
+                    android:text="+"
+                    android:textSize="8pt"
+                    android:textColor="@color/black"
+                    android:background="@color/yellow"
+                    android:layout_marginStart="2pt"
+                    android:id="@+id/calcPlus" android:onClick="operatorIvent"/>
+        </TableRow>
+
+        <TableRow android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginBottom="2pt"
+        >
+            <Button
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
+                    android:layout_weight="1"
+                    android:text="4"
+                    android:textSize="8pt"
+                    android:textColor="@color/black"
+                    android:background="@color/darkyellow"
+                    android:layout_marginStart="2pt"
+                    android:id="@+id/calcFour" android:onClick="numberIvent"/>
+            <Button
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
+                    android:layout_weight="1"
+                    android:text="5"
+                    android:textSize="8pt"
+                    android:textColor="@color/black"
+                    android:background="@color/darkyellow"
+                    android:layout_marginStart="2pt"
+                    android:id="@+id/calcFive" android:onClick="numberIvent"/>
+            <Button
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
+                    android:layout_weight="1"
+                    android:text="6"
+                    android:textSize="8pt"
+                    android:textColor="@color/black"
+                    android:background="@color/darkyellow"
+                    android:layout_marginStart="2pt"
+                    android:id="@+id/calcSix" android:onClick="numberIvent"/>
+            <Button
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
+                    android:layout_weight="1"
+                    android:text="-"
+                    android:textSize="8pt"
+                    android:textColor="@color/black"
+                    android:background="@color/yellow"
+                    android:layout_marginStart="2pt"
+                    android:id="@+id/calcMinus" android:onClick="operatorIvent"/>
+        </TableRow>
+
+        <TableRow android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginBottom="2pt"
+        >
+            <Button
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
+                    android:layout_weight="1"
+                    android:text="7"
+                    android:textSize="8pt"
+                    android:textColor="@color/black"
+                    android:background="@color/darkyellow"
+                    android:layout_marginStart="2pt"
+                    android:id="@+id/calcSeven" android:onClick="numberIvent"/>
+            <Button
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
+                    android:layout_weight="1"
+                    android:text="8"
+                    android:textSize="8pt"
+                    android:textColor="@color/black"
+                    android:background="@color/darkyellow"
+                    android:layout_marginStart="2pt"
+                    android:id="@+id/calcEight" android:onClick="numberIvent"/>
+            <Button
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
+                    android:layout_weight="1"
+                    android:text="9"
+                    android:textSize="8pt"
+                    android:textColor="@color/black"
+                    android:background="@color/darkyellow"
+                    android:layout_marginStart="2pt"
+                    android:id="@+id/calcNine" android:onClick="numberIvent"/>
+            <Button
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
+                    android:layout_weight="1"
+                    android:text="@string/percent"
+                    android:textSize="8pt"
+                    android:textColor="@color/black"
+                    android:background="@color/yellow"
+                    android:layout_marginStart="2pt"
+                    android:id="@+id/calcPercent" android:onClick="operatorIvent"/>
+        </TableRow>
+
+        <TableRow android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginBottom="2pt"
+        >
+            <Button
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
+                    android:layout_weight="1"
+                    android:text="."
+                    android:textSize="8pt"
+                    android:textColor="@color/black"
+                    android:background="@color/darkyellow"
+                    android:layout_marginStart="2pt"
+                    android:id="@+id/calcDot" android:onClick="numberIvent"/>
+            <Button
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
+                    android:layout_weight="1"
+                    android:text="0"
+                    android:textSize="8pt"
+                    android:textColor="@color/black"
+                    android:background="@color/darkyellow"
+                    android:layout_marginStart="2pt"
+                    android:id="@+id/calcZero" android:onClick="numberIvent"/>
+            <Button
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
+                    android:layout_weight="1"
+                    android:text="="
+                    android:textSize="8pt"
+                    android:textColor="@color/black"
+                    android:background="@color/darkyellow"
+                    android:layout_marginStart="2pt"
+                    android:id="@+id/calcEqual" android:onClick="equals"/>
+        </TableRow>
+
+    </TableLayout>
+
+
+</LinearLayout>
